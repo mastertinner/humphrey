@@ -1,8 +1,6 @@
 package game
 
-import (
-	"github.com/manifoldco/promptui"
-)
+import "github.com/manifoldco/promptui"
 
 var templates = &promptui.SelectTemplates{
 	Label:    " ",
