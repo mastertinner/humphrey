@@ -1,18 +1,19 @@
-.PHONY: all lint test build-docker deploy-cf clean
-
-.EXPORT_ALL_VARIABLES:
-GO111MODULE = on
-
-all:
+.PHONY: build
+build:
 	go build -o bin/humphrey ./cmd/humphrey
-	./bin/humphrey
 
+.PHONY: run
+run:
+	go run cmd/humphrey/main.go
+
+.PHONY: lint
 lint:
 	golangci-lint run
 
+.PHONY: test
 test:
 	go test -race -cover ./...
 
+.PHONY: clean
 clean:
 	rm -rf bin
-

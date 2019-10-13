@@ -7,7 +7,7 @@ import (
 
 var manual = &game.Scene{
 	Image: img.Console,
-	Body:  "Willkomme zu däm interaktive Textabetüür vomne chliine Hamster. Um z spile, muesch eifach aube mit de Pfilitaste dini nächsti Antwort uswählä u när Enter drücke. Lug, so:",
+	Body:  "Willkomme zu däm interaktivä Textabetüür vomne chliine Hamster. Um z spile, muesch eifach aube mit de Pfilitaste dini nächsti Antwort uswählä u när Enter drücke. Lug, so:",
 	Actions: map[string]game.Renderer{
 		"I has chegget 💡":   intro,
 		"I chume druus 👌":   intro,
@@ -25,7 +25,7 @@ var intro = &game.Scene{
 
 var intro2 = &game.Scene{
 	Image: img.Eating,
-	Body:  "Woni chli grösser bi gsi, ischs när drum gange dass mir Gschwüsterti ufteilt wärdä. Eis nachem andere sisi wäggange, di andere Hamster, nur ig bi am Schluss no allei dert gsi. Aber das isch scho OK. Mir Hamster si ja gärn allei. Eines Tages si när doch no zwöi cho luege wosech für mi interessiert hei 👱‍♀️🧑🏽. I ha zersch dänkt es sige chli komischi aber si si när eingch no lieb gsi. I gloub di einti hani rächt schnäu ume Finger gwicklet gha. Dasch gar nid so schwirig. Eifach chli lieb driluege und a öppisem umeknäbberle. De chunnt das scho guet.",
+	Body:  "Woni chli grösser bi gsi, ischs när drum gange dass mir Gschwüsterti ufteilt wärdä. Eis nachem andere sisi wäggange, di andere Hamster, nur ig bi am Schluss no allei dert gsi. Aber das isch scho OK. Mir Hamster si ja gärn allei. Eines Tages si när doch no zwöi cho luege wosech für mi interessiert hei 👱\u200d♀️🧑🏽. I ha zersch dänkt es sige chli komischi aber si si när eingch no lieb gsi. I gloub di einti hani rächt schnäu ume Finger gwicklet gha. Dasch gar nid so schwirig. Eifach chli lieb driluege und a öppisem umeknäbberle. De chunnt das scho guet.",
 	Actions: map[string]game.Renderer{
 		"Ächt? 😱 Ds funktioniert??": intro3,
 	},
