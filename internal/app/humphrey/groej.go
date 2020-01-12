@@ -52,7 +52,7 @@ var groejTogether = &game.Scene{
 	Image: img.Together,
 	Body:  "Di zwe loufe los u chöme scho glii wider im Wohnzimmer verbii. Dert hocke d Säri u dr Nino und luege grad di nöisti Folg 'Sex Education' uf Netflix.",
 	Actions: map[string]game.Renderer{
-		"Zur Säri gah 👱\u200d♀️": approachSarah,
-		"Zum Nino gah 🧑🏽":        approachNino,
+		"Zur Säri gah 👩": approachSarah,
+		"Zum Nino gah 👱": approachNino,
 	},
 }

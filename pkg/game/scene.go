@@ -33,6 +33,11 @@ func (s *Scene) Render() {
 		items = append(items, a)
 	}
 
+	templates := &promptui.SelectTemplates{
+		Label:    " ",
+		Active:   `{{ "✓" | green }} {{ . }}`,
+		Inactive: "  {{ . }}",
+	}
 	prompt := promptui.Select{
 		Items:     items,
 		Templates: templates,
