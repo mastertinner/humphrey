@@ -4,6 +4,7 @@ linters:
     - gochecknoglobals
     - lll
     - wsl
+    - nlreturn
 
 linters-settings:
   govet:
