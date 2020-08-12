@@ -31,6 +31,6 @@ func typeWrite(str string) {
 
 // printIndent prints an indented text.
 func printIndent(str string) {
-	str = strings.Replace(str, "\n", "\n                 ", -1)
+	str = strings.ReplaceAll(str, "\n", "\n                 ")
 	fmt.Print(str)
 }
