@@ -6,9 +6,10 @@ import (
 	"time"
 )
 
-// optimalLineLengh is the optimal length of a line in a paragraph.
 const (
+	// optimalLineLengh is the optimal length of a line in a paragraph.
 	optimalLineLengh = 80
+	// typeWriteTimeout determines the speed at which the typewriter types.
 	typeWriteTimeout = 5 * time.Millisecond
 )
 
@@ -26,11 +27,11 @@ func typeWrite(str string) {
 		fmt.Print(s)
 		column++
 	}
+
 	fmt.Println("")
 }
 
-// printIndent prints an indented text.
-func printIndent(str string) {
-	str = strings.ReplaceAll(str, "\n", "\n                 ")
-	fmt.Print(str)
+// withIndentation adds indentation to a string.
+func withIndentation(str string) string {
+	return strings.ReplaceAll(str, "\n", "\n                 ")
 }

@@ -1,6 +1,8 @@
 linters:
   enable-all: true
   disable:
+    - exhaustivestruct
+    - forbidigo
     - gochecknoglobals
     - lll
     - wsl

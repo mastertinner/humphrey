@@ -7,6 +7,12 @@ import (
 	"github.com/manifoldco/promptui"
 )
 
+var promptuiTemplates = &promptui.SelectTemplates{
+	Label:    " ",
+	Active:   `{{ "✓" | green }} {{ . }}`,
+	Inactive: "  {{ . }}",
+}
+
 // Scene is a game scene.
 type Scene struct {
 	Image   string
@@ -21,7 +27,7 @@ func (s *Scene) Render() {
 	fmt.Println("")
 	fmt.Println("")
 	fmt.Println("")
-	printIndent(s.Image)
+	fmt.Println(withIndentation(s.Image))
 	fmt.Println("")
 	fmt.Println("")
 	fmt.Println("")
@@ -33,15 +39,11 @@ func (s *Scene) Render() {
 		items = append(items, a)
 	}
 
-	templates := &promptui.SelectTemplates{
-		Label:    " ",
-		Active:   `{{ "✓" | green }} {{ . }}`,
-		Inactive: "  {{ . }}",
-	}
 	prompt := promptui.Select{
 		Items:     items,
-		Templates: templates,
+		Templates: promptuiTemplates,
 	}
+
 	_, choice, err := prompt.Run()
 	if err != nil {
 		log.Fatal(err)
